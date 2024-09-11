@@ -5,8 +5,8 @@ CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -O2 -g3
 
 OBJS_DIR = .obj/
 SRC_DIR = srcs/
-HEADERS = include/Fixed.hpp
-SRCS = main.cpp Fixed.cpp
+HEADERS = include/Fixed.hpp include/Point.hpp
+SRCS = main.cpp Fixed.cpp Point.cpp bsp.cpp
 
 OBJS = $(addprefix $(OBJS_DIR), $(SRCS:.cpp=.o)) 
 
