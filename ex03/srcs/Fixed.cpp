@@ -6,7 +6,7 @@
 /*   By: eandre <eandre@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 17:07:05 by eandre            #+#    #+#             */
-/*   Updated: 2024/09/11 14:20:25 by eandre           ###   ########.fr       */
+/*   Updated: 2024/09/15 18:21:29 by eandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ Fixed	Fixed::operator-(const Fixed &other_Fixed) const
 Fixed	Fixed::operator*(const Fixed &other_Fixed) const
 {
 	Fixed result(0);
-	result.raw_bits = (this->raw_bits * other_Fixed.raw_bits) >> bits;
+	result.raw_bits = (this->raw_bits * other_Fixed.raw_bits) / (1 << bits);
 	return (result);
 }
 

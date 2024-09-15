@@ -23,7 +23,7 @@ $(NAME) : $(OBJS)
 	$(C++) $^ $(CPPFLAGS) -o $(NAME) && sleep 0.1
 	@echo "$(Green)\r------Compilation de BSP finie !-------${NC}"
 
-$(OBJS_DIR)%.o : $(SRC_DIR)%.cpp Makefile
+$(OBJS_DIR)%.o : $(SRC_DIR)%.cpp Makefile $(HEADERS)
 	$(C++) $(CPPFLAGS) -c $< -o $@
 
 clean :
