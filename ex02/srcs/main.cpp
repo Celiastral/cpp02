@@ -6,7 +6,7 @@
 /*   By: eandre <eandre@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 17:07:09 by eandre            #+#    #+#             */
-/*   Updated: 2024/09/17 13:49:44 by eandre           ###   ########.fr       */
+/*   Updated: 2024/09/17 14:05:47 by eandre           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,12 @@ int	main(void)
 	Fixed a;
 	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
 	Fixed c(1);
+	Fixed d(c);
+
 	std::cout << "a = " << a << std::endl;
 	std::cout << "++a = " << ++a << std::endl;
 	std::cout << "c = " << c << std::endl;
+	std::cout << "d = " << d << std::endl;
 	if (a < c)
 		std::cout << "c is greater than a" << std::endl;
 	else
